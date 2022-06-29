@@ -1,0 +1,2736 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+div {
+    margin: 0;
+}
+
+@media screen and (max-width:767px)  {
+
+    /* ヘッダー */
+    header {
+        width: 100%;
+        background-color: #E2F0D9;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 60;
+        /* border-bottom: 5px solid #548235; */
+    }
+    .logo {
+        width: 50px;
+        height: 60px;
+        display: flex;
+        align-items: center;
+        margin-left: 10px;
+    }
+    .logo  img {
+        width: 100%;
+    }
+    .link {
+        margin: 20px;
+        align-items: center;
+    }
+    .link > a {
+        color: black;
+        text-decoration: none;
+        font-size: 20px;
+    }
+    .link > a:hover {
+        text-decoration: underline;
+    }
+    
+    header > div:nth-child(2) {
+        display: flex;
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+    
+    .header-text {
+        margin-right: 20px;
+        text-align: right;
+    }
+    .header-text .icon-userName {
+        display: flex;
+        justify-content: right;
+    }
+    .header-text > a {
+        color: black;
+        text-decoration: none;
+        font-size: 16px;
+    }
+    .header-text > a:hover {
+        text-decoration: underline;
+    }
+    .header-text > p {
+        font-size: 18px;
+    }
+    #menu {
+        width: 60px;
+        height: 60px;
+        background-color: #548235;
+        z-index: 50;
+    }
+    #menu:hover {
+        opacity: .8;
+    }
+    .hamburger {
+        width: 30px;
+        height: 30px;
+        background-color: #548235;
+        margin: 15px auto;
+        display: block;
+        position: relative;
+        cursor: pointer;
+        z-index: 50;
+    }
+    .hamburger span {
+        width: 30px;
+        height: 2px;
+        border-radius: 2px;
+        background-color: white;
+        position: absolute;
+        z-index: 50;
+        transition: all .3s ease;
+    }
+    .hamburger > span:nth-child(1) {
+        top: 5px;
+    }
+    .hamburger > span:nth-child(2) {
+        top: 14px;
+    }
+    .hamburger > span:nth-child(3) {
+        bottom: 5px;
+    }
+    
+    .open > span:nth-child(1) {
+        top: 15px;
+        transform: rotate(45deg);
+    }
+    .open > span:nth-child(2) {
+        display: none;
+    }
+    .open > span:nth-child(3) {
+        top: 15px;
+        transform: rotate(-45deg);
+    }
+    
+    /* ナビゲーション */
+    .nav-mask {
+        position: absolute;
+        top: 0;
+        right: -768px;
+        width: 100%;
+        height: 100vh;
+        background-color: #548235;
+        z-index: 30;
+        transition: all .3s ease;
+    }
+    .show-nav {
+        right: 0;
+    }
+    nav ul {
+        margin-top: 100px;
+    }
+    nav li {
+        list-style: none;
+        font-size: 16px;
+        margin: 40px 0;
+    }
+    nav li > a {
+        color: white;
+        text-decoration: none;
+    }
+    nav li > a:hover {
+        text-decoration: underline;
+    }
+    
+    
+    /* 会員登録 */
+    .registration {
+        max-width: 600px;
+        width: 90%;
+        background-color: #E2F0D9;
+        border: 3px solid #548235;
+        margin: 100px auto 10px auto;
+        border-radius: 60px;
+    }
+    .registration > h1 {
+        text-align: center;
+    }
+    .registration > form {
+        max-width: 450px;
+        width: 75%;
+        margin: 0 auto;
+    }
+    .registerInputBox {
+        display: flex;
+        flex-direction: column;
+        margin: 30px auto;
+    }
+    input {
+        height: 30px;
+        outline: none;
+    }
+    .registration-btn {
+        width: 100px;
+        height: 46px;
+        background-color: #548235;
+        color: white;
+        border-radius: 10px;
+        padding: 10px 6px 10px 6px;
+        font-size: 16px;
+    
+        border: 1px solid #548235;
+    }
+    .registration-btn:hover {
+        background-color: white;
+        color: #548235;
+    }
+    #to-registrationCheck {
+        width: 150px;
+    }
+    
+    .error {
+        color: #ff0000;
+    }
+    
+    /* 会員情報確認 */
+    .check-info {
+        max-width: 450px;
+        width: 50%;
+        margin: 0;
+    }
+    .check-info p {
+        margin: 5px 0 0 0;
+        font-size: 18px;
+    }
+    .check-info > div {
+        margin: 30px auto;
+    }
+    
+    #registrationCheck-btn {
+        display: flex;
+        width: 100%;
+        margin: 70px auto 30px auto;
+        justify-content: space-between;
+    }
+    
+    /* 会員登録完了 */
+    #registrationConpletion {
+        margin-top: 100px;
+    }
+    #registrationConpletion > h1 {
+        margin: 40px auto;
+    }
+    #registrationConpletion > p {
+        max-width: 500px;
+        width: 90%;
+        font-size: 18px;
+        margin: 0 auto 70px auto;
+    }
+    
+    /* ログイン */
+    #to-registrationInput {
+        height: 60px;
+        margin: 0px 10px;
+        display: flex;
+        align-items: center;
+    }
+    .toRegistration-btn {
+        /*width: 100px;*/
+        background-color: #548235;
+        color: white;
+        border-radius: 30px;
+        padding: 6px;
+        font-size: 16px;
+        border: 1px solid #548235;
+    }
+    .toRegistration-btn:hover {
+        background-color: white;
+        color: #548235;
+    }
+    .login {
+        max-width: 600px;
+        width: 90%;
+        background-color: #E2F0D9;
+        border: 3px solid #548235;
+        margin: 100px auto 10px auto;
+        border-radius: 60px;
+    }
+    .login > h1 {
+        text-align: center;
+    }
+    #login-forms {
+        max-width: 450px;
+        width: 75%;
+        margin: 0 auto;
+    }
+    .login-form {
+        display: flex;
+        flex-direction: column;
+        margin: 30px auto;
+    }
+    .login-btn {
+        width: 150px;
+        height: 46px;
+        background-color: #548235;
+        color: white;
+        border-radius: 10px;
+        padding: 10px 6px 10px 6px;
+        font-size: 16px;
+        border: 1px solid #548235;
+    }
+    .login-btn:hover {
+        background-color: white;
+        color: #548235;
+    }
+    .login-btn-place {
+        text-align: center;
+        margin: 70px auto 30px auto;
+    }
+    
+    /* ホーム */
+    .main-header {
+        width: 100%;
+        height: 50px;
+        background-color: white;
+        display: flex;
+        border-bottom: 1px solid gray;
+        position: fixed;
+        top: 60px;
+        left: 0;
+        z-index: 20;
+    }
+    .timeline-main-header {
+        justify-content: space-between;
+        align-items: center;
+    }
+    .post-main-header {
+        justify-content: space-between;
+        flex-direction: column;
+        width: 100%;
+        height: 90px;
+        background-color: white;
+        display: flex;
+        border-bottom: 1px solid gray;
+        position: fixed;
+        top: 60px;
+        left: 0;
+        z-index: 20;
+    }
+    .post-main-header > div {
+        display: flex;
+    }
+    .main-header p {
+        font-size: 20px;
+        margin: 10px;
+    }
+    .main-header h1 {
+        font-size: 18px;
+        font-weight: normal;
+        margin: 10px;
+    }
+    .shown-posts {
+        color: black;
+        text-decoration: none;
+    }
+    .hidden-posts {
+        color: lightgray;
+        text-decoration: none;
+    }
+    .hidden-posts:hover {
+        color: black;
+    }
+    
+    .wrapper {
+        width: 90%;
+        margin: 0 auto;
+    }
+    .posts-list {
+        width: 100%;
+        display: grid;
+        margin: 190px auto 20px auto;
+        grid-auto-rows: 477px;
+        grid-template-columns: repeat(auto-fit, 100%);
+        justify-content: center;
+    }
+    .draft-btn {
+        margin: 0px 20px 10px 10px; 
+        font-size: 12px;
+        font-weight: lighter;
+        padding: 5px 10px;
+        border: 1px solid #2F528F;
+        background-color: #548ef3;
+        color: white;
+        border-radius: 15px;
+        cursor: pointer;
+    }
+    .post {
+        width: 90%;
+        background-color: #E2F0D9;
+        border: 2px solid #548235;
+        margin: 0 20px 40px 20px;
+        display: inline-block;
+        text-align: left;
+    }
+    .myPost {
+        padding-top: 30px;
+    }
+    .icon-userName {
+        display: flex;
+        align-items: center;
+        margin: 5px 0 5px 10px;
+        width: 90%
+    }
+    .icon-userName > p {
+        margin: 0;
+    }
+    .icon {
+        width: 20px;
+        height: 20px;
+        /*border: 1px solid black;*/
+        border-radius: 50%;
+        margin-right: 5px;
+        background-color: white;
+        overflow: hidden;
+    }
+    .icon > img {
+        height: 100%;
+    }
+    .title {
+        height: 56px;
+        font-size: 18px;
+        margin: 0 10px 10px 10px;
+        overflow: scroll;
+    }
+    .thumnail {
+        width: 90%;
+        height: 200px;
+        /*border: 1px solid black;*/
+        /*background-color: white;*/
+        overflow: hidden;
+        margin: 0 auto;
+    }
+    .tags {
+        width: 90%;
+        height: 66px;
+        overflow: scroll;
+        margin: 10px auto;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .tag {
+        height: 20px;
+        background-color: #DAE3F3;
+        border: 1px solid #2F528F;
+        padding: 3px 10px;
+        margin-bottom: 5px;
+        border-radius: 15px;
+        margin-right: 10px;
+    }
+    .reaction-to-myPost {
+        display: flex;
+        margin: 0 0 10px 25px;
+    }
+    .reaction {
+        display: flex;
+        margin: 0 0 10px 0px;
+    }
+    .reaction p,
+    .reaction-to-myPost p {
+        margin: 0 20px 0 0;
+    }
+    
+    /* 保存投稿一覧 */
+    .othersPosts-list {
+        width: 100%;
+        margin: 210px auto 0 auto;
+        display: grid;
+        grid-auto-rows: 530px;
+        grid-template-columns: repeat(auto-fit, 100%);
+        justify-content: center;
+    }
+    .reaction-img {
+        width: 90%;
+        margin: 0 10px;
+        box-sizing: border-box;
+        display: flex;
+        justify-content: space-between;
+    }
+    .good-comment {
+        display: flex;
+    }
+    .good-comment > div {
+        margin-right: 10px;
+    }
+    .good-img,
+    .comment-img,
+    .save-img {
+        width: 30px;
+        cursor: pointer;
+    }
+    .good-img > img,
+    .comment-img > img,
+    .save-img > img {
+        width: 100%;
+    }
+    .save_post_userName,
+    .post_userName,
+    .question_userName {
+        cursor: pointer;
+    }
+    
+    /* フォロー/フォロワー */
+    #follow-header,
+    #followList {
+        display: none;
+    }
+    #phone_followList {
+        padding-top: 60px;
+    }
+    
+    .follow,
+    .follower {
+        width: 100%;
+        border-bottom: 1px solid gray;
+        margin-bottom: 10px;
+        /*background-color: #548235;*/
+        height: 50px;
+        display: flex;
+        align-items: center;
+    }
+    .follow > h1,
+    .follower > h1 {
+        margin: 0;
+        /*color: #fff;*/
+        font-size: 18px;
+        margin-left: 10px;
+    }
+    .user_search_header {
+        padding: 10px ;
+        border-bottom: 1px solid gray;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-sizing: border-box;
+    }
+    
+    #follow-list {
+        border-bottom: 1px solid gray;
+        margin: 0;
+    }
+    .follow-follower-list {
+        width: 100%;
+        min-height: 200px;
+        border-bottom: 1px solid gray;
+        margin: 0;
+    }
+    .follow-user {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 10px;
+    }
+    .follow-user .icon {
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+    }
+    .follow-user p {
+        font-size: 16px;
+    }
+    .follow-btn,
+    .follow-cancel,
+    #follow-btn {
+        background-color: #548ef3;
+        color: white;
+        height: 16px;
+        font-size: 12px; 
+        text-decoration: none;
+        margin-right: 10px;
+        padding: 7px 10px 8px 10px;
+        border-radius: 30px;
+        border: 1px solid #2F528F;
+        cursor: pointer;
+    }
+    .user_search_form {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+    .user_search {
+        width: 100%;
+        padding-top: 0px;
+        background-color: white;
+        box-sizing: border-box;
+        overflow: scroll;
+    }
+    .userSearch_form {
+        width: 80%;
+        height: 26px;
+        margin-right: 5px;
+        background-color: #F2F2F2;
+        border: 1px solid black;
+    }
+    .userSearch-btn {
+        height: 30px;
+        background-color: #F2F2F2;
+        font-size: 13px;
+        border: 1px solid #000;
+        border-radius: 2px;
+        cursor: pointer;
+    }
+    .userSearch-btn:hover {
+        background-color: #D9D9D9;
+    }
+    .user_page_link {
+        cursor: pointer;
+        color: #000;
+        text-decoration: none;
+    }
+    .follow-btn-container {
+        width: 150px;
+        height: 51px;
+        display: flex;
+        align-items: center;
+    }
+    .user-posts-list {
+        width: 100%;
+        display: grid;
+        margin: 121px auto 20px auto;
+        grid-auto-rows: 477px;
+        grid-template-columns: repeat(auto-fit, 100%);
+        justify-content: center;
+    }
+    .to_user_page,
+    .to_user_page_from_follow {
+        cursor: pointer;
+    }
+    /* 設定 */
+    #setting {
+        width: 100%;
+        margin: 120px auto 0 auto;
+    }
+    .tabs {
+        width: 100vw;
+        margin: 0 calc(50% - 50vw);
+        display: flex;
+        padding-left: 5%;
+        border-bottom: 2px solid #548235;
+        box-sizing: border-box;
+    }
+    .tab {
+        list-style: none;
+        font-size: 14px;
+        margin: 0;
+        padding: 5px 8px 0 8px;
+        cursor: pointer;
+    }
+    .tab a {
+        color: #000;
+        text-decoration: none;
+    }
+    .active-tab {
+        background-color: #548235;
+        border-radius: 10px 10px 0 0;
+    }
+    .active-tab a {
+        color: white;
+    }
+    .setting-content {
+        margin-top: 20px;
+        display: none;
+    }
+    .show-content {
+        display: flex;
+    }
+    
+    .pc_tabs {
+        display: none;
+    }
+    .phone_tabs {
+        
+    }
+    
+    /* 会員情報設定 */
+    .user-item {
+        display: flex;
+        flex-direction: column;
+    }
+    .setting-icon {
+        display: flex;
+        /*flex-direction: column;*/
+        justify-content: space-between;
+        align-items: center;
+    }
+    .setting-user {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        /*justify-content: space-between;*/
+    }
+    .setting-user .icon {
+        width: 120px;
+        height: 120px;
+        margin: 0 0 10px 0;
+    }
+    .user-info {
+        /*margin-left: 30px;*/
+        min-width: 270px;
+    }
+    .user-info h3 {
+        font-size: 16px;
+        font-weight: normal;
+        margin: 0;
+    }
+    .user-info p{
+        margin: 0 0 20px 0;
+        font-size: 16px;
+    }
+    .change {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .change-btn {
+        float: right;
+        font-size: 12px;
+        font-weight: lighter;
+        padding: 5px 10px;
+        border: 1px solid #2F528F;
+        background-color: #548ef3;
+        color: white;
+        border-radius: 20px;
+        cursor: pointer;
+    }
+    .change-btn:hover {
+        background-color: white;
+        color: #548ef3;
+        font-weight: bold;
+    }
+    
+    .change-forms {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .change-form {
+        display: none;
+        width: 100%;
+        background-color: #E2F0D9;
+        border: 1px solid #548235;
+        border-radius: 40px;
+    }
+    .change-form form > div {
+        display: flex;
+        flex-direction: column;
+        width: 80%;
+        margin: 30px auto 10px auto;
+    }
+    .change-form form > div input {
+        height: 20px;
+        margin-bottom: 20px;
+    }
+    .show-changeForm {
+        display: block;
+    }
+    .change-form label {
+        font-size: 16px;
+    }
+    #newIcon-header > p {
+        margin: 0;
+        font-size: 16px;
+    }
+    #newIcon-header {
+        display: flex;
+        width: 90%;
+        justify-content: space-between;
+        margin: 30px auto 0 auto;
+    }
+    #selection-icon {
+        background-color: #548235;
+        color: #fff;
+        border: none;
+        border-radius: 10px;
+        width: 90px;
+        cursor: pointer;
+    }
+    .new-icon {
+        width: 220px;
+        height: 220px;
+        /*border: 1px solid black;*/
+        border-radius: 50%;
+        /*background-color: white;*/
+        margin: 20px auto;
+        overflow: hidden;
+    }
+    
+    .setting-btn > button,
+    #userIcon_change_btn {
+        width: 120px;
+        background-color: #548235;
+        color: white;
+        border-radius: 10px;
+        padding: 3px 10px;
+        font-size: 14px;
+        border: 1px solid #548235;
+        cursor: pointer;
+    }
+    .setting-btn > button:hover,
+    #userIcon_change_btn:hover {
+        background-color: white;
+        color: #548235;
+        font-weight: bold;
+    }
+    .setting-btn {
+        width: 75%;
+        margin: 0 auto 20px auto;
+        text-align: center;
+    }
+    /* お気に入りタグ設定 */
+    .setting-favoriteTags {
+        width: 100%;
+    }
+    .setting-favoriteTags > p {
+        margin: 0;
+        text-align: center;
+        font-size: 16px;
+    }
+    .favorite-tags {
+        width: 100%;
+        overflow: scroll;
+        margin: 10px auto;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        padding-left: 20px;
+        box-sizing: border-box;
+    }
+    .fav-tag {
+        height: 25px;
+        background-color: #DAE3F3;
+        border: 1px solid #2F528F;
+        padding: 3px 10px;
+        margin-bottom: 10px;
+        border-radius: 20px;
+        margin-right: 10px;
+        opacity: 0.3;
+        cursor: pointer;
+    }
+    .fav-on {
+        opacity: 1;
+    }
+    
+    /* 質問受け取り設定 */
+    .setting-questionReceive {
+        width: 90%;
+        max-width: 500px;
+        background-color: #E2F0D9;
+        border: 1px solid #548235;
+        border-radius: 40px;
+        margin: 0 auto;
+        /*padding: 30px 100px;*/
+    }
+    .setting-questionReceive > div {
+        margin: 20px auto;
+        width: 180px;
+    }
+    .setting-questionReceive label {
+        position: relative;
+        font-size: 16px;
+        margin-left: 20px;
+    }
+    .questionReceive {
+        width: 20px;
+        margin-right: 10px;
+    }
+    
+    .setting-questionReceive button {
+        
+    }
+    .questionReceive-options {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+    #questionReceive-yes-btn,
+    #questionReceive-no-btn {
+        width: 15px;
+        height: 15px;
+        border: 1px solid #000;
+        border-radius: 50%;
+        background-color: #fff;
+        position: relative;
+        margin: 0;
+    }
+    .check {
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background-color: #000;
+        position: absolute;
+        top: 2.5px;
+        left: 2.5px;
+        margin: 0;
+        opacity: 0;
+    }
+    .checked {
+        opacity: 1;
+    }
+    
+    /* 通知設定 */
+    .setting-notification {
+        width: 100%;
+        display: flex;
+        /*flex-ditection: column;*/
+        /*justify-content: space-between;*/
+    }
+    .notification-item {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        /*justify-content: space-between;*/
+    }
+    .notification-info {
+        /*margin-left: 30px;*/
+        min-width: 270px;
+    }
+    .notification-info h3 {
+        font-size: 16px;
+        font-weight: normal;
+        margin: 0;
+    }
+    .notification-info p{
+        margin: 0 0 20px 0;
+        font-size: 20px;
+    }
+    
+    .selected-user {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 350px;
+        max-height: 100px;
+        overflow: scroll;
+        margin: 5px auto;
+    }
+    .selected-user .icon-userName {
+        margin: 0;
+    } 
+    .selected-user p {
+        margin: 0;
+        font-size: 16px;
+    }
+    .notificationTags {
+        
+        width: 350px;
+        max-height: 75px;
+        overflow: scroll;
+        margin: 10px auto;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .note-tag {
+        font-size: 14px;
+        height: 20px;
+        background-color: #DAE3F3;
+        border: 1px solid #2F528F;
+        padding: 3px 10px;
+        margin-bottom: 5px;
+        border-radius: 20px;
+        margin-right: 10px;
+    }
+    
+    
+    
+    .notification-changes {
+        width: 100%;
+        display: block;
+    }
+    .notification-change {
+        display: none;
+    }
+    .show-noteChange {
+        display: block;
+    }
+    .noteChange-titleBox {
+        width: 100%;
+        background-color: #E2F0D9;
+        border: 2px solid #548235;
+        border-radius: 40px 40px 0 0;
+    }
+    .noteChange-title {
+        font-size: 16px;
+        text-align: center;
+    }
+    .noteChange-contentBox {
+        width: 100%;
+        background-color: white;
+        border: 2px solid #548235;
+        border-top: none;
+        border-radius: 0 0 40px 40px;
+    }
+    .followUser-lists {
+        width: 90%;
+        max-width: 500px;
+        height: 300px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        margin: 0 auto;
+        overflow: scroll;
+    }
+    .userSelection-btn {
+        width: 30px;
+        height: 20px;
+        text-align: center;
+        float: right;
+        font-size: 12px;
+        font-weight: lighter;
+        padding: 5px 10px;
+        border: 1px solid #2F528F;
+        background-color: #548ef3;
+        color: white;
+        border-radius: 20px;
+        cursor: pointer;
+    }
+    .userSelection {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    
+    .postTag-selection {
+        width: 90%;
+        height: 220px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        margin: 0 auto;
+        overflow: scroll;
+    }
+    .noteChangeTags {
+        width: 100%;
+        overflow: scroll;
+        margin: 10px auto;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        padding-left: 20px;
+        box-sizing: border-box;
+    }
+    .noteChange-tag {
+        height: 25px;
+        background-color: #DAE3F3;
+        border: 1px solid #2F528F;
+        padding: 3px 10px;
+        margin-bottom: 10px;
+        border-radius: 20px;
+        margin-right: 10px;
+        opacity: 0.3;
+        cursor: pointer;
+    }
+    .notePost-on,
+    .noteQuestion-on {
+        opacity: 1;
+    }
+    
+    /* 新規投稿作成 */
+    /* 本文作成 */
+    #createNewPost {
+        width: 100%;
+        /*height: 100vh;*/
+        display: flex;
+        flex-direction: column;
+    }
+    #create-flow {
+        width: 180px;
+        height: 400px;
+        /*border-right: 1px solid gray;*/
+    }
+    #createPost-container {
+        display: flex;
+        flex-direction: column;
+        /*height: 100vh;*/
+        flex-grow: 1;
+    }
+    .create-box {
+        /*flex-grow: 1;*/
+        height: 500px;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+    }
+    #create-box-right {
+        width: 100%;
+    }
+    #create-box-left {
+        background-color: #fff;
+        width: 100%;
+    }
+    
+    .createContent-preview {
+        position: absolute;
+        width: 100%;
+        /*height: 100vh;*/
+        padding: 65px 5px 0 5px;
+        box-sizing: border-box;
+        overflow: scroll;
+    }
+    /* 投稿作成フロー表示 */
+    .createFlow-list {
+        margin: 130px auto 0 auto;
+        padding: 0;
+    }
+    .createFlow-list li {
+        list-style: none;
+        margin: 20px 20px;
+    
+    }
+    .createFlow-list a {
+        text-decoration: none;
+    }
+    .other-step a,
+    .other-step {
+        color: #AFABAB;
+    }
+    .show-step a,
+    .show-step {
+        color: black;
+        font-size: 18px;
+        font-weight: bold;
+    }
+    #create-box-left > div {
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+    }
+    .createBox-header {
+        width: 100%;
+        height: 60px;
+        background-color: white;
+        border-bottom: 1px solid gray;
+        border-top: 1px solid gray;
+        display: flex;
+        /*padding-top: 177px;*/
+        z-index: 10;
+    }
+    .createBox-header p {
+        font-size: 18px;
+    }
+    .text-heading {
+        flex-grow: 1;
+        padding-left: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 60px;
+        z-index: 10;
+    }
+    .text-heading-right {
+        flex-grow: 1;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 60px;
+        z-index: 10;
+    }
+    .store-btn  button {
+        width: 100px;
+        background-color: #548235;
+        color: white;
+        border-radius: 10px;
+        padding: 3px 10px;
+        font-size: 16px;
+        border: 1px solid #548235;
+        cursor: pointer;
+    }
+    .store-btn {
+        margin: 0 10px;
+    }
+    .img-select {
+        width: 150px;
+        border: none;
+        border-left: 1px solid gray;
+        background-color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+    }
+    .imgSelect-icon {
+        width: 20px;
+        margin-right: 10px;
+        margin-top: 5px;
+    }
+    .img-select img {
+        width: 100%;
+    }
+    .thumnail-select {
+        display: flex;
+        align-items: center;
+    }
+    .thumnail-select > p {
+        margin: 0;
+    
+    }
+    .thumnailImg-select {
+        background-color: #fff;
+        height: 60px;
+        margin-left: 20px;
+        padding: 0 10px;
+        border: none;
+        border-left: 1px solid gray;
+        border-right: 1px solid gray;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+    }
+    .thumnailImg-select p {
+        margin: 0;
+    }
+    .thumnailImg-select img {
+        width: 100%;
+    }
+    
+    #content_htmlTag,
+    #postContent_preview,
+    #postContent_save,
+    #fileElem{
+        display: none;
+    }
+    
+    #postContent_preview-btn {
+        width: 150px;
+        height: 60px;
+        border: none;
+        border-right: 1px solid gray;
+        background-color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+    }
+    
+    .postContent-imgs {
+        width: 100%;
+    }
+    .postContent-img {
+        width: 100%;
+    }
+    
+    /* タイトル作成 */
+    .createPost-form,
+    .text-content {
+        flex-grow: 1;
+        width: 100%;
+        height: 100%;
+        background-color: white;
+        margin: 0;
+    }
+    .createPost-form > textarea {
+        width: 100%;
+        height: 100%;
+        border: 0;
+        box-sizing: border-box;
+        outline: none;
+        font-size: 16px;
+        padding: 5px;
+    }
+    .thumnail-up {
+        width: 90%;
+        margin: 80px auto;
+    }
+    
+    /* タグ指定 */
+    .createPostTags-container {
+        width: 100%;
+        border-top: 1px solid #000;
+        display: flex;
+        padding: 0px 0 20px 0;
+    }
+    .createPostTags-container p {
+        margin-top: 10px;
+    }
+    .createPostTags-btn {
+        text-align: center;
+    }
+    .post-tags {
+        width: 100%;
+        overflow: scroll;
+        margin: 10px auto;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        padding-left: 20px;
+        box-sizing: border-box;
+    }
+    .post-tag {
+        height: 25px;
+        background-color: #DAE3F3;
+        border: 1px solid #2F528F;
+        padding: 3px 10px;
+        margin-bottom: 10px;
+        border-radius: 20px;
+        margin-right: 10px;
+        opacity: 0.3;
+        cursor: pointer;
+    }
+    .tag-on {
+        opacity: 1;
+    }
+    
+    /* 内容確認 */
+    .checkPost-box {
+        flex-grow: 1;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+    }
+    #checkPost-box-left {
+        background-color: #fff;
+        min-width: 360px;
+    }
+    #checkPost-box-left > div {
+        display: flex;
+        flex-direction: column;
+    }
+    .createPost-sample {
+        width: 95%;
+        max-width: 350px;
+        background-color: #E2F0D9;
+        border: 2px solid #548235;
+        margin: 30px auto;
+        display: block;
+        text-align: left;
+        box-sizing: border-box;
+    }
+    
+    #postContentPreview-head {
+        margin-left: 10px; 
+    }
+    #draft-btn {
+        width: 110px;
+    }
+    /* 投稿完了 */
+    #createPost-complete {
+        display: block;
+        height: 100vh;
+        flex-grow: 1;
+        border-top: 1px solid #000;
+    }
+    .post-complete {
+        flex-grow: 1;
+        width: 100%;
+        height: 100%;
+        background-color: white;
+        margin: 0;
+        /*padding-top: 177px;*/
+        box-sizing: border-box;
+    }
+    .complete-message {
+        max-width: 600px;
+        width: 90%;
+        background-color: #E2F0D9;
+        border: 3px solid #548235;
+        margin: 40px auto 10px auto;
+        border-radius: 30px;
+    }
+    .complete-message > p {
+        font-size: 20px;
+        text-align: center;
+    }
+    .toTimeline-btn {
+        text-align: center;
+        padding-bottom: 40px;
+    }
+    .toTimeline-btn button {
+        width: 230px;
+        background-color: #548235;
+        color: white;
+        border-radius: 10px;
+        padding: 3px 10px;
+        font-size: 16px;
+        border: 1px solid #548235;
+        cursor: pointer;
+    }
+    .post-complete {
+        flex-grow: 1;
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding-top: 150px;
+        box-sizing: border-box;
+        position: fixed;
+        top: 0;
+        left: 0;
+        
+    }
+    /* タイムライン */
+    #timeline-container {
+        width: 100%;
+        height: 100vh;
+        padding-top: 121px;
+        box-sizing: border-box;
+        display: flex;
+    }
+    .search-area {
+        position: fixed;
+        top: -1000px;
+        left: 0;
+        padding: 111px 0 20px 0;
+        width: 100%;
+        height: 100vh;
+        overflow: scroll;
+        box-sizing: border-box;
+        /*min-width: 300px;*/
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+        /*display: none;*/
+        transition: all .3s ease;
+    }
+    .search-area-show {
+        top: 0;
+    }
+    .posts-area {
+        flex-grow: 1;
+        background-color: white;
+        overflow: scroll;
+    }
+    .timelinePosts-list {
+        width: 100%;
+        display: grid;
+        margin: 30px auto 20px auto;
+        grid-auto-rows: 530px;
+        grid-template-columns: repeat(auto-fit, 100%);
+        justify-content: center;
+    }
+    #search_btn {
+        background-color: #548235;
+        height: 30px;
+        display: flex;
+        align-items: center;
+        border-radius: 10px;
+        padding: 0 15px;
+        margin-right: 10px;
+        cursor: pointer;
+    }
+    #search_btn > p {
+        color: #fff;
+        font-size: 14px;
+        margin: 0;
+    }
+    /* キーワード検索 */
+    .keyword-search {
+        width: 100%;
+        height: 60px;
+        padding: 20px 0; 
+        border-bottom: 1px solid gray;
+        display: flex;
+        flex-direction: column;
+    }
+    .keyword-search > form {
+        width: 100%;
+        flex-grow: 1;
+        background-color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .keyword {
+        width: 80%;
+        height: 26px;
+        margin-right: 5px;
+        background-color: #F2F2F2;
+        border: 1px solid black;
+    }
+    .keywordSearch-btn {
+        height: 30px;
+        background-color: #F2F2F2;
+        font-size: 13px;
+        border: 1px solid #000;
+        border-radius: 2px;
+        cursor: pointer;
+    }
+    .keywordSearch-btn:hover {
+        background-color: #D9D9D9;
+    }
+    /* タグ検索 */
+    .tags-search {
+        width: 100%;
+        flex-grow: 1;
+    }
+    .searchTags-box {
+        width: 100%;
+    }
+    .searchTags-box > p {
+        margin: 10px 0 0 0;
+        text-align: center;
+        font-size: 16px;
+    }
+    .search-tags {
+        width: 100%;
+        overflow: scroll;
+        margin: 10px auto;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        padding-left: 20px;
+        box-sizing: border-box;
+    }
+    .tagSearch-btn {
+        width: 100px;
+        background-color: #548235;
+        color: white;
+        border-radius: 10px;
+        padding: 3px 10px;
+        font-size: 16px;
+        border: 1px solid #548235;
+        cursor: pointer;
+    }
+    .timelineSearch-btn {
+        text-align: center;
+    }
+    .search-tag {
+        height: 25px;
+        background-color: #DAE3F3;
+        border: 1px solid #2F528F;
+        padding: 3px 10px;
+        margin-bottom: 10px;
+        border-radius: 20px;
+        margin-right: 10px;
+        opacity: 0.3;
+        cursor: pointer;
+    }
+    .search-on {
+        opacity: 1;
+    }
+    .post_date {
+        margin-left: 10px;
+        width: 90%;
+    }
+    .title {
+        cursor: pointer;
+    }
+    #pc_error_message {
+        display: none;
+    }
+    
+    #phone_error_message {
+        margin-left: 10px;
+        display: flex;
+        align-items: center;
+    }
+    #phone_error_message > p {
+        margin: 0;
+        font-size: 16px; 
+    }
+    
+    /* 検索結果 */
+    #pc_search_result {
+        display: none;
+    }
+    /* 個々の投稿詳細 */
+    .postDetail-header {
+        align-items: center;
+    }
+    .postDetail-header > h2 {
+        font-size: 20px;
+        margin: 0 30px;
+    }
+    #postDetail-container {
+        width: 100%;
+        padding-top: 111px;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+    }
+    .reaction-area {
+        width: 100%;
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+        z-index: 30;
+        /* box-sizing: border-box; */
+    }
+    .postDetails {
+        max-width: 750px;
+        width: 90%;
+        background-color: #E2F0D9;
+        border: 1px solid #548235;
+        margin: 30px auto;
+        padding: 25px;
+        box-sizing: border-box;
+    }
+    .postDetail-textBox {
+        width: 100%;
+    }
+    .postDetail-textBox > p {
+        font-size: 18px;
+        margin: 0;
+    }
+    .postDetails-icon-userName {
+        display: flex;
+        align-items: center;
+        margin: 10px 0;
+    }
+    .postDetails-icon-userName > p {
+        margin: 0;
+    }
+    .post-detail-tags {
+        width: 100%;
+        min-height: 66px;
+        overflow: scroll;
+        margin: 10px 0;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    /* グッド＆保存 */
+    .good-save {
+        width: 100%;
+        height: 80px;
+        /*border-bottom: 1px solid gray;*/
+        border-top: 1px solid gray;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        box-sizing: border-box;
+        padding: 0 10px;
+        z-index: 20;
+    }
+    .goodSave-box {
+        display: flex;
+    }
+    .goodSave-img,
+    .comment-img {
+        width: 40px;
+        margin-right: 10px;
+    }
+    .goodSave-img > img,
+    .comment-img > img {
+        width: 100%;
+    }
+    .backTimeline-btn {
+        width: 160px;
+        background-color: #548235;
+        color: white;
+        border-radius: 10px;
+        padding: 3px 10px;
+        font-size: 14px;
+        border: 1px solid #548235;
+        cursor: pointer;
+    }
+    /* コメント */
+    .comment-box {
+        width: 100%;
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+    }
+    .comment-form-box {
+        width: 100%;
+        height: 250px;
+        border-top: 1px solid gray;
+        border-bottom: 1px solid gray;
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+        box-sizing: border-box;
+        z-index: 20;
+    }
+    .comment-lists {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        /*position: fixed;*/
+        /*right: 0;*/
+        /*bottom: 0;*/
+    }
+    .commentForm-title {
+        width: 100%;
+        display: flex;
+        align-items: center;
+    }
+    .commentForm-title > p {
+        margin: 0;
+    }
+    .comment-form-box > form {
+        width: 100%;
+        flex-grow: 1;
+        text-align: center;
+    }
+    .comment-form {
+        width: 100%;
+        height: 130px;
+        box-sizing: border-box;
+    }
+    .comment-btn {
+        width: 160px;
+        background-color: #548235;
+        color: white;
+        margin-top: 5px;
+        border-radius: 10px;
+        padding: 3px 10px;
+        font-size: 16px;
+        border: 1px solid #548235;
+        cursor: pointer;
+    }
+    /* コメント欄 */
+    .comment-num {
+        width: 100%;
+        height: 40px;
+        border-bottom: 1px solid gray;
+        display: flex;
+        /*margin-top: 510px;*/
+        align-items: center;
+        padding: 8px 10px;
+        box-sizing: border-box;
+    }
+    .comment-num > p {
+        margin: 0;
+    }
+    .comment-num  span {
+        margin-left: 10px;
+    }
+    .comment-list {
+        flex-grow: 1;
+        display: flex;
+        overflow: scroll;
+    }
+    
+    .comment {
+        /* height: 130px; */
+        border-bottom: 1px solid gray;
+        padding: 10px 10px;
+        box-sizing: border-box;
+    }
+    
+    .comment-icon-userName {
+        display: flex;
+        align-items: center;
+        margin: 0;
+    }
+    .comment-icon-userName > p {
+        margin: 0;
+    }
+    .comment-icon-userName > .icon {
+        width: 25px;
+        height: 25px;
+    }
+    .show-reply-btn {
+        display: flex;
+        align-items: center;
+    }
+    .comment p {
+        margin: 0;
+    }
+    .reply > p {
+        font-size: 14px;
+        color: #2E75B6;
+        cursor: pointer;
+    }
+    .reply_form {
+        text-align: center;
+        margin-bottom: 8px;
+    }
+    .show-reply-btn > p {
+        font-size: 14px;
+        cursor: pointer;
+    }
+    .line-img {
+        width: 30px;
+        display: flex;
+        align-items: center;
+    }
+    .line-img > img {
+        width: 100%;
+    }
+    
+    .comment-contents {
+        width: 100%;
+        background-color: #fff;
+        overflow: scroll;
+    }
+    
+    .reply-comment-contents {
+        width: 100%;
+        border-top: 1px solid gray;
+        background-color: #E2F0D9;
+        overflow: scroll;
+    }
+    
+    .hidden_form,
+    .hidden-reply-comment {
+        display: none;
+    }
+    .show_form,
+    .show-reply-comment {
+        display: block;
+    }
+    
+    /* 質問ホーム */
+    #questionHome-container {
+        display: flex;
+        flex-direction: column-reverse;
+        padding-top: 151px;
+        width: 100%;
+        height: 100vh;
+        box-sizing: border-box;
+    }
+    .myQuestions {
+        flex-grow: 1;
+        background-color: white;
+        overflow: scroll;
+    }
+    /* 質問ホームのリンク */
+    .question-link {
+        width: 100%;
+        background-color: #548235;
+    }
+    .question-link > ul {
+        margin: 10px 0 0 0;
+        padding-left: 10px;
+    }
+    .question-link li {
+        list-style: none;
+        margin-bottom: 10px;
+    }
+    .question-link a {
+        color: #fff;
+        text-decoration: none;
+        font-size: 18px;
+    }
+    .question-link a:hover {
+        text-decoration: underline;
+    }
+    /* 質問リスト */
+    
+    .question-lists {
+        margin: 30px 0 30px 20px;
+        display: grid;
+        grid-auto-rows: 380px;
+        grid-template-columns: repeat(auto-fit, 370px);
+        justify-content: center;
+    }
+    .question {
+        width: 90%;
+        background-color: #E2F0D9;
+        border: 1px solid #548235;
+        border-radius: 50px;
+        padding: 30px 20px;
+        box-sizing: border-box;
+    }
+    .myQuestion {
+        height: 350px;
+    }
+    .question-title {
+        margin-bottom: 15px;
+        font-size: 18px;
+        height: 24px;
+        cursor: pointer;
+    }
+    .question p {
+        margin: 0;
+    }
+    .question-label {
+        font-size: 18px;
+    }
+    .question-content {
+        width: 100%;
+        height: 150px;
+        overflow: scroll;
+        margin-bottom: 15px;
+    }
+    .question-imgs {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+    .question-img {
+        width: 250px;
+        height: 150px;
+        border: 1px solid #000;
+        background-color: #fff;
+    }
+    .question-tags {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        height: 30px;
+        overflow: scroll;
+        margin-bottom: 15px;
+    }
+    .my_question-tag {
+        text-align: center;
+        height: 20px;
+        background-color: #DAE3F3;
+        border: 1px solid #2F528F;
+        padding: 3px 10px;
+        margin-bottom: 5px;
+        border-radius: 15px;
+        margin-right: 10px;
+    }
+    .question-answerNum {
+        margin-bottom: 15px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .question-answerNum span {
+        margin-left: 5px;
+    }
+    
+    
+    
+    
+    /* 新規質問作成 */
+    #createQuestion-box-left {
+        background-color: #fff;
+        width: 100%;
+        max-height: 1100px;
+        overflow: scroll;
+    }
+    #createQuestion-box-left > div {
+        display: flex;
+        flex-direction: column;
+        /*height: 680px;*/
+        box-sizing: border-box;
+    }
+    .createQuestion-box {
+        flex-grow: 1;
+        height: 600px;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+    }
+    .createQuestion-form {
+        flex-grow: 1;
+        width: 100%;
+        height: 100%;
+        background-color: white;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        overflow: scroll;
+    }
+    .createQuestion-title {
+        width: 100%;
+        flex-grow: 1;
+        border: 0;
+        border-bottom: 1px solid gray;
+        box-sizing: border-box;
+        background-color: white;
+        outline: none;
+        font-size: 16px;
+        padding: 5px;
+    }
+    .questionCreate-left {
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+        position: relative;
+    }
+    .createQuestion-box-left .text-heading {
+        position: absolute;
+        top: 177px;
+        left: 0;
+        background-color: #fff;
+        border-bottom: 1px solid gray;
+        width: 100%;
+        height: 61px;
+        box-sizing: border-box;
+    }
+    .questionCreate-right {
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+        position: relative;
+    }
+    .questionStore-btn {
+        width: 100px;
+        background-color: #548235;
+        color: white;
+        border-radius: 10px;
+        padding: 3px 10px;
+        font-size: 16px;
+        border: 1px solid #548235;
+        cursor: pointer;
+    }
+    .question-store {
+        width: 100px;
+        height: 40px;
+        margin: 15px auto;
+        display: flex;
+        align-items: center;
+    }
+    #questionCreate-content,
+    #questionCreate-try {
+        width: 100%;
+        height: 350px;
+        box-sizing: border-box;
+        font-size: 16px;
+        outline: none;
+    }
+    #questionCreate-title {
+        width: 100%;
+        height: 100px;
+        box-sizing: border-box;
+        font-size: 16px;
+        outline: none;
+    }
+    
+    .createQuestionText-form {
+        width: 90%;
+        background-color: #fff;
+        margin: 15px 0 0 0;
+    }
+    .questionCreate-content {
+        width: 100%;
+        height: 200px;
+        box-sizing: border-box;
+        outline: none;
+    }
+    .createQuestionForm-box {
+        width: 100%;
+        /*height: 100vh;*/
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding-top: 60px;
+        box-sizing: border-box;
+        background-color: #fff;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        overflow: scroll;
+    }
+    .createQuestion-box-left {
+        align-items: center;
+    }
+    .createQuestion-imgs {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 100%;
+        margin-bottom: 15px;
+    }
+    .createQuestion-img {
+        width: 250px;
+        height: 150px;
+        border: 1px solid #000;
+        margin: 0 10px 10px 0;
+    }
+    
+    .createContent-preview > p {
+        margin-bottom: 5px;
+    }
+    .preview_box {
+        width: 100%;
+        min-height: 80px;
+    }
+    #questionContent_preview-btn {
+        width: 150px;
+        height: 60px;
+        border: none;
+        border-right: 1px solid gray;
+        background-color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+    }
+    
+    .question_img_btn {
+        background-color: #548235;
+        width: 100px;
+        color: #fff;
+        border:none;
+        margin: 10px 0 ;
+        border-radius: 10px;
+        cursor: pointer;
+    }
+    
+    /* 新規質問作成_タグ選択&ユーザー指定 */
+    #createQuestionTags-box-left {
+        background-color: #fff;
+        width: 100%;
+        height: 850px;
+    }
+    #createQuestionTags-box-left > div {
+        display: flex;
+        flex-direction: column;
+        box-sizing: border-box;
+    }
+    .questionCreate-tags-box,
+    .questionCreate-users-container {
+        width: 100%;
+        flex-grow: 1;
+        padding-top: 30px;
+        background-color: #fff;
+    }
+    .questionCreate-tags {
+        width: 100%;
+        overflow: scroll;
+        margin: 10px auto;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        padding-left: 20px;
+        box-sizing: border-box;
+    }
+    .question-tag {
+        height: 25px;
+        background-color: #DAE3F3;
+        border: 1px solid #2F528F;
+        padding: 3px 10px;
+        margin-bottom: 10px;
+        border-radius: 20px;
+        margin-right: 10px;
+        opacity: 0.3;
+        cursor: pointer;
+    }
+    .tag-on {
+        opacity: 1;
+    }
+    
+    .questionCreate-users-box {
+        width: 100%;
+        text-align: center;
+    }
+    .questionCreate-users-box > p {
+        margin: 0;
+        font-size: 18px;
+    }
+    .questionCreateUsers-list {
+        width: 100%;
+    }
+    .questionCreateUsers {
+        width: 100%;
+        height: 300px;
+        margin: 30px auto;
+        overflow: scroll;
+    }
+    .questionCreateUser {
+        width: 85%;
+        display: flex;
+        align-items: center;
+        margin: 0 auto 5px auto;
+        justify-content: space-between;
+    }
+    .questionCreateUsers-select {
+        width: 90px;
+        height: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #DAE3F3;
+        border: 1px solid #2F528F;
+        border-radius: 20px;
+        cursor: pointer;
+    }
+    .questionCreateUsers-select > p {
+        margin: 0;
+    }
+    /*新規質問作成_内容確認 */
+    .pc_question_confirm {
+        display: none;
+    }
+    .createQuestionBox-header {
+        width: 100%;
+        height: 60px;
+        background-color: white;
+        border-bottom: 1px solid gray;
+        border-top: 1px solid gray;
+        display: flex;
+        /*padding-top: 177px;*/
+        z-index: 10;
+        position: relative;
+    }
+    .createQuestionBox-header p {
+        font-size: 18px;
+    }
+    .textQuestion-heading {
+        padding-left: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 60px;
+        z-index: 10;
+    }
+    .questionCreateCheck-sample {
+        width: 90%;
+        background-color: #fff;
+    }
+    .questionSample {
+        margin: 30px auto;
+    }
+    .questionSample .icon-userName {
+        width: 100%;
+        margin: 0 0 15px 0;
+    }
+    .questionCreate-content {
+        width: 100%;
+        height: 100px;
+        overflow: scroll;
+        margin-bottom: 15px;
+    }
+    .questionSample-content {
+        margin-bottom: 20px;
+    }
+    .questionSample-img {
+        width: 100%;
+        height: 200px;
+        border: 1px solid #000;
+        background-color: #fff;
+        margin-bottom: 20px;
+    }
+    .questionSample-tags-users {
+        width: 100%;
+        /*flex-grow: 1;*/
+        background-color: #fff;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .questionSample-tags-box,
+    .questionSample-users-box {
+        width: 90%;
+        max-height: 230px;
+        /*padding-top: 30px;*/
+        box-sizing: border-box;
+    }
+    .questionSample-tags-users p {
+        margin: 0;
+        font-size: 18px;
+    }
+    .questionSample-tags,
+    .questionSample-users {
+        width: 100%;
+        max-height: 160px;
+        margin: 15px auto 0 auto;
+    }
+    .questionSample-tags {
+        /* width: 350px; */
+        max-height: 160px;
+        overflow: scroll;
+        margin: 10px 0;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        /* display: grid;
+        grid-auto-rows: 50px;
+        grid-template-columns: repeat(auto-fit, 120px);
+        overflow: scroll; */
+    }
+    .questionSample-tags .question-tag {
+        height: 30px;
+        border-radius: 20px;
+    }
+    .questionSample-users {
+        display: grid;
+        grid-auto-rows: 50px;
+        grid-template-columns: repeat(auto-fit, 180px);
+        overflow: scroll;
+    }
+    .questionSample-users .icon-userName {
+        margin: 0 0 5px 0;
+    }
+    
+    /* 質問一覧 */
+    #questionList-container {
+        width: 100%;
+        height: 100vh;
+        padding-top: 111px;
+        box-sizing: border-box;
+        display: flex;
+    }
+    .questionList-box {
+        flex-grow: 1;
+        background-color: white;
+        overflow: scroll;
+    }
+    .otherQuestion-lists {
+        margin: 30px 0 30px 20px;
+        display: grid;
+        grid-auto-rows: 420px;
+        grid-template-columns: repeat(auto-fit, 370px);
+        justify-content: center;
+    }
+    .otherQuestion {
+        height: 390px;
+    }
+    .otherQuestion .icon-userName {
+        margin: 0 0 15px 0;
+    }
+    
+    /* 個々の質問表示 */
+    #questionDetail-container {
+        width: 100%;
+        /*height: 100vh;*/
+        padding-top: 121px;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+    }
+    .question-area {
+        /*flex-grow: 1;*/
+        background-color: white;
+        overflow: scroll;
+    }
+    .questionDetails {
+        max-width: 750px;
+        width: 90%;
+        background-color: #E2F0D9;
+        border: 1px solid #548235;
+        border-radius: 50px;
+        margin: 30px auto;
+        padding: 25px;
+        box-sizing: border-box;
+    }
+    .questionDetails .icon-userName {
+        margin: 0 0 15px 0;
+    }
+    .questionDetails > p {
+        font-size: 20px;
+        margin: 0 0 10px 0;
+    }
+    .questionDetails-content {
+        margin-bottom: 20px;
+    }
+    .questionDetails-content p {
+        margin: 0;
+    }
+    .questionDetails-content-imgs {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .questionDetails-content-img {
+        width: 300px;
+        height: 200px;
+        margin: 0 20px 20px 0;
+        border: 1px solid #000;
+        background-color: #fff;
+    }
+    .questionDetails-tags {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .answers-area {
+        width: 100%;
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+    }
+    .answer-lists {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    .answers-list-header {
+        width: 100%;
+        height: 80px;
+        border-top: 1px solid gray;
+        border-bottom: 1px solid gray;
+        display: flex;
+        margin-top: 0px;
+        align-items: center;
+        justify-content: space-between;
+        padding: 24px 20px;
+        box-sizing: border-box;
+    }
+    .answers-list-header > p {
+        margin: 0;
+        font-size: 20px;
+    }
+    .answers-list-header  span {
+        margin-left: 10px;
+    }
+    .answers-list {
+        flex-grow: 1;
+        display: flex;
+        overflow: scroll;
+    }
+    .createAnswer-btn {
+        width: 160px;
+        background-color: #548235;
+        color: white;
+        border-radius: 10px;
+        padding: 3px 10px;
+        font-size: 16px;
+        border: 1px solid #548235;
+        cursor: pointer;
+    }
+    .answersList-contents {
+        width: 100%;
+        padding-top: 20px;
+        background-color: #fff;
+        overflow: scroll;
+    }
+    .answer {
+        width: 90%;
+        max-height: 270px;
+        background-color: #E2F0D9;
+        border: 1px solid #548235;
+        border-radius: 50px;
+        margin: 0 auto 20px auto;
+        padding: 25px;
+        box-sizing: border-box;
+    }
+    .answer .icon-userName {
+        margin: 0 0 15px 0;
+    }
+    .bestAnswer-flag {
+        width: 30px;
+        display: none;
+    }
+    .bestAnswer-flag > img {
+        width: 100%;
+    }
+    .bestAnswer-on {
+        display: flex;
+    }
+    .answer-content {
+        width: 100%;
+        max-height: 140px;
+        box-sizing: border-box;
+        overflow: scroll;
+    }
+    .answer-content > p {
+        margin: 0;
+    }
+    
+    .answer_date_and_comment > p {
+        margin-top: 8px;
+    }
+    
+    .answer_date_and_comment {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    
+    .answer_content {
+        cursor: pointer;
+    }
+    
+    .draft-answer-header {
+        width:100%; 
+        height:50px; 
+        margin-bottom:20px;
+        border-top: 1px solid #000;
+        border-bottom: 1px solid #000;
+        display: flex;
+        align-items: center;
+    }
+    .draft-answer-header p {
+        margin: 0 0 0 20px; 
+    }
+    .answers-list-header {
+        
+    }
+    
+    /* 新規回答作成 */
+    #createAnswer-container {
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+        flex-grow: 1;
+    }
+    .createAnswer-form {
+        flex-grow: 1;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        background-color: white;
+        margin: 0;
+    }
+    .createAnswer-form > textarea {
+        width: 100%;
+        flex-grow: 1;
+        border: 0;
+        border-bottom: 1px solid gray;
+        box-sizing: border-box;
+        outline: none;
+        font-size: 16px;
+        padding: 5px;
+    }
+    .createAnswerStore-btn {
+        width: 160px;
+        height: 40px;
+        background-color: #548235;
+        color: white;
+        border-radius: 10px;
+        margin: 15px auto;
+        padding: 3px 10px;
+        font-size: 16px;
+        border: 1px solid #548235;
+        cursor: pointer;
+    }
+    #createAnswer-container .text-heading {
+        flex-grow: 1;
+        padding-left: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        height: 60px;
+        z-index: 10;
+    }
+    .answer-submit {
+        margin-left: 30px;
+    }
+    .createAnswer-box {
+        flex-grow: 1;
+    }
+    .createAnswerComplete {
+        padding-top: 0px;
+        border-top: 1px solid #000;
+    }
+    .createAnswer-check {
+        width: 95%;
+        max-width: 400px;
+        background-color: #E2F0D9;
+        border: 1px solid #548235;
+        border-radius: 50px;
+        margin: 30px auto 20px auto;
+        padding: 25px;
+        box-sizing: border-box;
+    }
+    .createAnswer-check .icon-userName {
+        margin: 0;
+    }
+    .answer-complete {
+        flex-grow: 1;
+        width: 100%;
+        height: 100%;
+        background-color: white;
+        margin: 0;
+        padding-top: 100px;
+        box-sizing: border-box;
+    }
+    
+    /* 個々の回答 */
+    #answerDetail-container {
+        width: 100%;
+        padding-top: 111px;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+    }
+    .answer-area {
+        flex-grow: 1;
+        background-color: white;
+        overflow: scroll;
+        border-right: 1px solid gray;
+    }
+    .answerDetails {
+        max-width: 750px;
+        width: 90%;
+        background-color: #E2F0D9;
+        border: 1px solid #548235;
+        border-radius: 50px;
+        margin: 30px auto;
+        padding: 25px;
+        box-sizing: border-box;
+    }
+    .answerDetails .icon-userName {
+        margin: 0 0 15px 0;
+    }
+    .answerDetail-content {
+        margin-bottom: 15px;
+    }
+    .answerDetail-content p,
+    .answer-date p {
+        margin: 0;
+    }
+    .bestAnswer_btn {
+        color: #fff;
+        background-color: #548ef3;
+        border-radius: 10px;
+        border: 1px solid #2F528F;
+        margin-bottom: 10px;
+        cursor: pointer; 
+    }
+    #question_title {
+        cursor: pointer;
+    }
+    .answer-comment-form-box {
+        width: 100%;
+        height: 250px;
+        border-bottom: 1px solid gray;
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+        box-sizing: border-box;
+        z-index: 20;
+    }
+    .answer-comment-num {
+        width: 100%;
+        height: 40px;
+        border-bottom: 1px solid gray;
+        display: flex;
+        /*margin-top: 430px;*/
+        align-items: center;
+        padding: 8px 10px;
+        box-sizing: border-box;
+    }
+    .answer-comment-num > p {
+        margin: 0;
+    }
+    .answer-comment-num  span {
+        margin-left: 10px;
+    }
+    .red {
+        border-bottom: 1px solid #000;
+        width: 100%; 
+        height: 100px;
+    }
+    .last {
+        background-color: #000;
+    }
+    
+    /* 商品検索 */
+    .shop_main_header {
+        display: flex;
+        justify-content: space-between;
+        height: 100px;
+    }
+    #shop_head {
+        display: flex;
+        align-items: center;
+    }
+    #shop_search {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-right: 10px;
+        align-items: flex-end;
+    }
+    #shop_search .search {
+        width: 240px;
+    }
+    #shop_search .keyword {
+        width: 180px;
+    }
+    #genre_search {
+        width: 95px;
+        height: 30px;
+        margin-left: 30px;
+        margin-top: 5px;
+        background-color: #F2F2F2;
+        font-size: 13px;
+        border: 1px solid #000;
+        border-radius: 2px;
+        cursor: pointer;
+    }
+    #items_search_btn {
+        background-color: #F2F2F2;
+        font-size: 13px;
+        border: 1px solid #000;
+        border-radius: 2px;
+        cursor: pointer;
+    }
+    #items_search_btn:hover,
+    #genre_search:hover {
+        background-color: #D9D9D9;
+    }
+    .items_list {
+        width: 100%;
+        margin-top: 178px;
+        box-sizing: border-box;
+    }
+    .genre_list {
+        position: fixed;
+        top: 0;
+        right: -400px;
+        width: 300px;
+        height: 100vh;
+        padding-top: 270px;
+        border-left: 1px solid gray;
+        background-color: #fff;
+        box-sizing: border-box;
+        overflow: scroll;
+        transition: all .3s ease;
+    }
+    .show_genre_list {
+        right: 0px;
+    }
+    .genres {
+        width: 100%;
+        overflow: scroll;
+        margin: 10px auto;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        padding-left: 20px;
+        box-sizing: border-box;
+    }
+    .genre {
+        height: 25px;
+        background-color: #DAE3F3;
+        border: 1px solid #2F528F;
+        padding: 3px 10px;
+        margin-bottom: 5px;
+        border-radius: 20px;
+        margin-right: 10px;
+        opacity: 0.3;
+        cursor: pointer;
+    }
+    .genre_on {
+        opacity: 1;
+    }
+    .genre_header {
+        position: fixed;
+        top: 161px;
+        right: -400px;
+        width: 300px;
+        background-color: #fff;
+        text-align: center;
+        border-left: 1px solid gray;
+        border-bottom: 1px solid gray;
+        box-sizing: border-box;
+        z-index: 20;
+        transition: all .3s ease;
+    }
+    .show_genre_header {
+        right: 0px;
+    }
+    .items_list {
+        width: 100%;
+        margin: 210px auto 0 auto;
+        display: grid;
+        grid-auto-rows: 420px;
+        grid-template-columns: repeat(auto-fit, 270px);
+        justify-content: center;
+    }
+    .item {
+        width: 250px;
+    }
+    .item_img {
+        width: 100%;
+        height: 250px;
+        overflow: hidden;
+    }
+    .item_img > img {
+        width: 100%;
+    }
+    .item_title {
+        max-height: 100px;
+        overflow: scroll;
+    }
+    .item_price {
+        margin: 0;
+    }
+    
+}
